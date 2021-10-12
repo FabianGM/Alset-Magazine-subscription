@@ -12,8 +12,9 @@ Once the project is downloaded, the following steps must be performed:
 ---
 ## Step 1 Installation
 1. Install ASP .NET CORE
-2. Use Postman or a tool to run the API
-3. SQL Server
+2. Install Blazor App
+3. Use Postman or a tool to run the API
+4. SQL Server
 
 ## Step 2 Initialize the Back-End and Front-End of the application
 
@@ -29,7 +30,8 @@ Both must be kept running for the Back-End and Fron-End to work.
 ## Step 3 Create User
 
 There is a default user in the project which can be accessed in the following way:
-You must send a POST to activate the authentication by JASON WEB TOKEN in this way
+You must send a POST to activate the authentication by JSON WEB TOKEN in this way
+
 ---
 https://localhost:5011/api/login
 ---
