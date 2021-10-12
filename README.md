@@ -103,10 +103,6 @@ https://localhost:5011/api/game
 ---
 https://localhost:5011/api/news
 ---
-
-![alt text](img/news.png)
-
-
 ```
 {
     "description":"ALSET es una empresa especializada en Tecnologías de la Información (TI) con una amplia experiencia en proporcionar a las industrias soluciones de última generación, avanzadas, confiables y sólidas para mejorar la infraestructura de sus procesos. Actualmente nuestros múltiples servicios brindan a las compañías diferentes satisfacciones en software hechos a la medida para resolver necesidades específicas de cada negocio. En ALSET tenemos respuestas competentes en: Desarrollo Web, Desarrollo Móvil, Soluciones en la Nube, Internet of Things, Quality Assurance (QA), Big Data, DevOps, Agile Project Management y Capacitaciones en nuevas tendencias informáticas para mostrar a las compañías cómo explotar al máximo estas y otras herramientas basadas en Tecnologías de la información. Proporcionamos un equipo confiable y altamente capacitado para brindar un servicio completo, actual, innovador y tecnológico que garantice resolver los problemas a los que se enfrentan los asociados de negocios. Para lograr esto buscamos instalar herramientas inteligentes que mejoren los procesos, dando un panorama más claro a los empresarios y un mayor control sobre su compañía. En resumen, somos una empresa que integra soluciones terminadas (software), recursos de apoyo a la empresa con personal altamente competente, capacitaciones y cursos para favorecer el uso máximo de estas. En ALSET la principal meta es la de dar soluciones especializadas a las necesidades de las múltiples industrias.",
@@ -114,6 +110,8 @@ https://localhost:5011/api/news
     "url":"https://www.alset.com.mx/"
 }
 ```
+![alt text](img/news.png)
+
 more descriptions can be added if desired
 
 ---
