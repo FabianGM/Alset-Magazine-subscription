@@ -7,6 +7,8 @@ It is a project that was finished in 24 hours and there are a few additional thi
 ## Video showing its operation
 ---
 https://youtu.be/Z8Hlo6yAaRI
+---
+
 
 Once the project is downloaded, the following steps must be performed:
 ---
@@ -53,11 +55,13 @@ This user is only a test user but below I will show how to create another test u
 
 ### First
 
+
 We create a database with the name Store
 ---
 ![alt text](img/Store_DB.png)
 
 ### Second
+
 
 Run the endpoint to add new users
 ---
@@ -83,6 +87,8 @@ https://localhost:5011/api/userprofile
 
 ## Step 4 Add magazines
 ---
+
+
 Run the following endpoint and add the necessary journals to the body
 ---
 https://localhost:5011/api/game
