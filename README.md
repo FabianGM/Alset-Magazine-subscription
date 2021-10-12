@@ -77,7 +77,7 @@ https://localhost:5011/api/userprofile
 ---
 ![alt text](img/data1.png)
 ---
-You can see that thanks to the use of Entity Framework the necessary tables will be created automatically and in turn you will also see that the users that you wrote will be added
+**You can see that thanks to the use of Entity Framework the necessary tables will be created automatically and in turn you will also see that the users that you wrote will be added**
 
 ## Step 4 Add magazines
 ---
@@ -114,7 +114,7 @@ https://localhost:5011/api/news
 ---
 ![alt text](img/db_new.png)
 
-more descriptions can be added if desired
+more descriptions can be added if needed
 
 ---
 ## Missing items
