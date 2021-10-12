@@ -97,8 +97,8 @@ https://localhost:5011/api/game
 ```
 ---
 ![alt text](img/add_magazines.png)
-
-
+---
+![alt text](img/db_journal.png)
 ## Step 5 Add Description about Alset
 ---
 https://localhost:5011/api/news
@@ -111,6 +111,8 @@ https://localhost:5011/api/news
 }
 ```
 ![alt text](img/news.png)
+---
+![alt text](img/db_new.png)
 
 more descriptions can be added if desired
 
