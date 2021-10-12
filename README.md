@@ -38,6 +38,7 @@ This user is only a test user but below I will show how to create another test u
 ### First
 
 We create a database with the name Store
+---
 ![alt text](img/Store_DB.png)
 
 ### Second
