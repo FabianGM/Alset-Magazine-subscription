@@ -33,13 +33,12 @@ You must send a POST to activate the authentication by JASON WEB TOKEN in this w
 ---
 https://localhost:5011/api/login
 ---
-`
+```
 {
     "user":"user",
     "password":"user"
 }
-
-`
+```
 ---
 ![alt text](img/user_default.png)
 
@@ -63,7 +62,7 @@ Run the endpoint to add new users
 https://localhost:5011/api/userprofile
 ---
 
-`
+```
 {
     "userName":"user1",
     "password":"user1",
@@ -72,7 +71,7 @@ https://localhost:5011/api/userprofile
     "country":"Ecuador"
 }
 
-`
+```
 ---
 ![alt text](img/endpoint1.png)
 ---
@@ -86,7 +85,7 @@ Run the following endpoint and add the necessary journals to the body
 ---
 https://localhost:5011/api/game
 ---
-`
+```
 {
     "title":"Serious Game Design and Clinical Improvement in Physical Rehabilitation: Systematic Review",
     "description":"Serious video games have now been used and assessed in clinical protocols, with several studies reporting patient improvement and engagement with this type of therapy. Even though some literature reviews have approached this topic from a game perspective and presented a broad overview of the types of video games that have been used in this context, there is still a need to better understand how different game characteristics and development strategies might impact and relate to clinical outcomes.",
@@ -95,9 +94,9 @@ https://localhost:5011/api/game
     "discountRate":"0"
 }
 
-`
+```
 ---
-![alt text](img/data1.png)
+![alt text](img/add_magazines.png)
 
 
 
