@@ -1,0 +1,59 @@
+﻿@inject IAutheticationService auth
+
+<header>
+    <a href="/">
+        <img src="/alset.png">
+        <span></span>
+    </a>
+</header>
+
+<nav class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul>
+        <li>
+            <NavLink class="home" href="" Match="NavLinkMatch.All">
+                <span class="jam jam-home-f" aria-hidden="true"></span> 
+                <span>Home</span>
+            </NavLink>
+        </li>
+        <li>
+            <NavLink class="store" href="store">
+                <span class="jam jam-tag-f" aria-hidden="true"></span> 
+                <span>Journals</span>
+            </NavLink>
+        </li>
+        <li>
+            <NavLink class="library" href="library">
+                <span class="jam jam-grid-f" aria-hidden="true"></span>
+                <span>Subscriptions</span>
+            </NavLink>
+        </li>
+        <li>
+            <a class="settings" href="#" @onclick="Logout">
+                <span class="jam jam-close-rectangle" aria-hidden="true"></span>
+                <span>Exit</span>
+            </a>
+        </li>
+         <li>
+            <NavLink class="settings" href="settings">
+                <span class="jam jam-cog-f" aria-hidden="true"></span>
+                <span>Settings</span>
+            </NavLink>
+        </li>
+    </ul>
+</nav>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    public void Logout()
+    {
+        auth.Logout();
+    }
+}

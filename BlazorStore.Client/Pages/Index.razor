@@ -1,0 +1,38 @@
+﻿@page "/"
+@inject IHttpService service
+@inject ILogger<Index> logger
+
+<div class="home">
+<main>
+    @if(listNews != null && listNews.Count> 0)
+    {
+        foreach(var item in listNews)
+        {
+            <a class="news-item" href="@item.Url" target="_blank">
+                <article>
+                    <div>
+                        <img src="@item.Image">
+                    </div>
+                    <div>
+                    <p>@item.Description</p>
+                    <span>Leer más</span>
+                    </div>
+                </article>
+            </a>
+        }
+    }
+</main>
+</div>
+
+@code
+{
+    List<News> listNews = new List<News>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        logger.LogInformation("Getting news..");
+        listNews = await service.Get<List<News>>("news");
+        logger.LogInformation("News set");
+    }
+}
+

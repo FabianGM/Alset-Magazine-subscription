@@ -1,0 +1,41 @@
+@page "/library"
+@inject AuthenticationStateProvider auth
+@inject IHttpService service
+
+<div class="library">
+    <main>
+        @if (gameList!=null && gameList.Count>0)
+        {
+            @foreach (var item in gameList)
+            {
+                <a class="game-card" href="#">
+                    <article>
+                        <div>
+                            <img src="@item.Image" />
+                        </div>
+                        <h3>@item.Title</h3>
+                        <p>
+                            <span class="jam jam-download"></span>
+                            <span>Descargar</span> 
+                        </p>
+                    </article>
+                </a>
+            }
+        }
+    </main>
+
+</div>
+
+
+
+@code
+{
+    List<Game> gameList = new List<Game>();
+
+    protected override async Task OnInitializedAsync()
+    { 
+       var userId = (await auth.GetAuthenticationStateAsync()).User?.Claims?.FirstOrDefault(p=> p.Type == System.Security.Claims.ClaimTypes.UserData)?.Value;
+    
+        gameList = await service.Get<List<Game>>($"usergame/GetGames/{userId}");
+    }
+}

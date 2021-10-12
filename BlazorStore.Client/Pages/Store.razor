@@ -1,0 +1,68 @@
+@page "/store"
+@inject AuthenticationStateProvider auth
+@inject IHttpService service
+@inject NavigationManager nav
+
+<div class="store">
+    
+    <main>
+       
+        @if (gameList!=null && gameList.Count>0)
+        {
+            @foreach (var item in gameList)
+            {
+                <a class="game-card" href="#" @onclick="()=> BuyGame(item.GameId)">
+                    <article>
+                        <div>
+                            <img src="@item.Image" />
+                        </div>
+                        <h3>@item.Title</h3>
+                        <p>@item.Description</p>
+                        <span style="color:#00aae4">Subscribe to the magazine</span>
+
+                        <footer>
+                            @if(item.DiscountRate > 0)
+                            {
+                                <div>-@item.DiscountRate.ToString("P0")</div>
+                                <p>
+                                    <del>@item.Price USD</del>                                
+                                </p>
+                                <span>@(item.Price - item.Price*item.DiscountRate) USD</span>
+                            }
+                            else
+                            {
+                                <span>@(item.Price) USD</span>
+                            }                            
+                        </footer>
+                    </article>
+                </a>
+            }
+        }
+    </main>
+
+</div>
+
+
+@code
+{
+    List<Game> gameList = new List<Game>();
+
+    protected override async Task OnInitializedAsync()
+    {
+       gameList  = await service.Get<List<Game>>("game");
+    }
+
+    public async Task BuyGame(Guid GameId)
+    {
+        var userId = (await auth.GetAuthenticationStateAsync()).User?.Claims?.FirstOrDefault(p=> p.Type == System.Security.Claims.ClaimTypes.UserData)?.Value;
+
+        UserGame userGame = new UserGame();
+        userGame.UserGameId = Guid.NewGuid();
+        userGame.GameId = GameId;
+        userGame.UserProfileId = Guid.Parse(userId);
+
+        await service.PostString($"UserGame/", userGame);
+
+        nav.NavigateTo("/library");
+    }
+}

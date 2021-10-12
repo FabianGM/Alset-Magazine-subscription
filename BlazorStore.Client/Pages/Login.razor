@@ -1,0 +1,63 @@
+@page "/login"
+@inject IAutheticationService authService
+@inject NavigationManager nav
+
+<div class="login">
+    <center>
+    <main>
+        <br/>
+        <br/>
+      
+        <h1>User and Password</h1>
+        <hr>
+        <EditForm Model="@userLogin" class="form" OnSubmit="@HandleLogin">
+            <div>
+                <label>
+                    <span>User</span>
+                    <InputText class="form-control" @bind-Value="userLogin.User" placeholder="User"></InputText>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>Password</span>
+                    <InputText type="password" class="form-control" @bind-Value="userLogin.Password" placeholder="Password"></InputText>
+                </label>
+            </div>
+            
+            @if(!string.IsNullOrEmpty(ErrorLogin)) 
+            {
+                <div class="validation-message">@ErrorLogin</div>
+            }
+            
+            <input type="submit" class="btn btn-primary" value="Login" />
+
+        </EditForm>
+
+
+    </main>
+    </center>
+</div>
+
+
+@code
+{
+    UserLogin userLogin = new UserLogin();
+
+    public string ErrorLogin = "";
+
+    private async Task HandleLogin()
+    {
+        var result = await authService.Login(userLogin);
+
+        if(result)
+        {
+            nav.NavigateTo("/");
+        }
+        else
+        {
+            ErrorLogin = "Usuario o Password Incorrecto";
+        }
+
+    }
+
+}
