@@ -2,7 +2,8 @@
 **This project is made with Blazer and .NET Core MVC**
 It is a project that was finished in 24 hours and there are a few additional things missing. The time limit to develop it was 48 hours, but hey, it is interesting to take on the challenge in less time.
 ---
-![Alt Text](img/demo.mp4)
+
+[![Alternate Text]({img/BlazorClient.png})]({img/demo.mp4 "Link Title")
 ---
 Once the project is downloaded, the following steps must be performed:
 ---
