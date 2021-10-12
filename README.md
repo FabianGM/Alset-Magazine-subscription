@@ -3,9 +3,11 @@
 It is a project that was finished in 24 hours and there are a few additional things missing. The time limit to develop it was 48 hours, but hey, it is interesting to take on the challenge in less time.
 ---
 [![Alt text](img/2.png)](https://youtu.be/Z8Hlo6yAaRI)
-[![asciicast](https://asciinema.org/a/113463.png)](https://asciinema.org/a/113463)
-[![ALSET](https://img.youtube.com/vi/https://youtu.be/Z8Hlo6yAaRI/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/Z8Hlo6yAaRI)
+
+## Video showing its operation
 ---
+[title] https://youtu.be/Z8Hlo6yAaRI
+
 Once the project is downloaded, the following steps must be performed:
 ---
 ## Step 1 Installation
