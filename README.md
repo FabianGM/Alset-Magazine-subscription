@@ -3,7 +3,7 @@
 It is a project that was finished in 24 hours and there are a few additional things missing. The time limit to develop it was 48 hours, but hey, it is interesting to take on the challenge in less time.
 ---
 [![Alt text](img/2.png)](https://youtu.be/Z8Hlo6yAaRI)
-
+[![asciicast](https://asciinema.org/a/113463.png)](https://asciinema.org/a/113463)
 ---
 Once the project is downloaded, the following steps must be performed:
 ---
